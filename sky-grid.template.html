@@ -1,0 +1,17 @@
+<div ng-repeat="section in content.sections" class="section grid-total-{{section.grid}}">
+	
+	<div ng-repeat="row in section.rows" class="row row-{{row.name}}">
+
+		<div ng-repeat="area in row.areas" class="area area-{{area.grid}}">
+			
+			<div ng-repeat="control in area.controls" class="control {{control.editor.alias}}">
+				
+				<div ng-include="'/sky-grid/controls/'+control.editor.alias+'.template.html'"></div>
+				
+			</div>
+
+		</div>
+		
+	</div>
+	
+</div>

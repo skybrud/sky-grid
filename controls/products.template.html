@@ -1,0 +1,11 @@
+<div class="zebra" ng-repeat="item in control.value.items">
+	<div class="row">
+		<div class="area-4">
+			<h2>{{item.title}}</h2>
+		</div>
+		<div class="area-4 product-image-container">
+			<img sky-crop-obj="{{item.media}}" sky-crop-mode="width" sky-crop-round="20" />
+		</div>
+		<div class="area-4" ng-bind-html="item.description"></div>
+	</div>
+</div>
